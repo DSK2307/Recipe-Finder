@@ -1,19 +1,15 @@
-import type { Metadata } from "next";
+"use client";
+
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AnimatedMain from "@/components/AnimatedMain";
+import { FavoritesProvider } from "@/context/FavoritesContext";
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
-
-export const metadata: Metadata = {
-  title: "Recipe Finder",
-  description: "A modern recipe finder app built with Next.js and Tailwind CSS",
-};
 
 export default function RootLayout({
   children,
@@ -23,9 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} bg-amber-100 text-gray-800`}>
-        <Header />
-        <AnimatedMain>{children}</AnimatedMain>
-        <Footer />
+        <FavoritesProvider>
+          <Header />
+          {children}
+          <Footer />
+        </FavoritesProvider>
       </body>
     </html>
   );

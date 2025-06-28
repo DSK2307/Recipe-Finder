@@ -1,12 +1,15 @@
-export default function Favorites() {
-  return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-orange-600 text-center">
-        Your Favorite Recipes
-      </h1>
-      <p className="text-lg text-gray-600 text-center mt-4">
-        View your saved recipes here.
-      </p>
-    </div>
-  );
+import type { Metadata } from "next";
+import dynamic from "next/dynamic";
+
+export const metadata: Metadata = {
+  title: "Your Favorite Recipes",
+  description: "View your saved favorite recipes",
+};
+
+const FavoritesClientComponent = dynamic(
+  () => import("./FavoritesClientComponent")
+);
+
+export default function FavoritesPage() {
+  return <FavoritesClientComponent />;
 }
