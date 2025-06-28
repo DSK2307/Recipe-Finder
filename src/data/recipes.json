@@ -2,7 +2,7 @@
   {
     "id": "1",
     "title": "Classic Margherita Pizza",
-    "image": "https://images.unsplash.com/photo-1604385945295-1393f7f9b874",
+    "image": "/images/pizza.jpg",
     "prepTime": "30 mins",
     "servings": 4,
     "ingredients": [
@@ -22,7 +22,7 @@
   {
     "id": "2",
     "title": "Chocolate Chip Cookies",
-    "image": "https://images.unsplash.com/photo-1621335673350-82c81f4d3c9f",
+    "image": "/images/cookies.jpg",
     "prepTime": "25 mins",
     "servings": 12,
     "ingredients": [
@@ -42,7 +42,7 @@
   {
     "id": "3",
     "title": "Grilled Chicken Salad",
-    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+    "image": "/images/salad.jpg",
     "prepTime": "20 mins",
     "servings": 2,
     "ingredients": [
