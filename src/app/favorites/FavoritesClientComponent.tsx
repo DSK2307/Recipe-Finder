@@ -1,6 +1,5 @@
 "use client";
 
-import { Recipe } from "@/types";
 import recipes from "@/data/recipes.json";
 import RecipeCard from "@/components/RecipeCard";
 import AnimatedMain from "@/components/AnimatedMain";
